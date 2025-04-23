@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -16,8 +16,12 @@
     --foreground: 210 40% 98%;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-dark-darker text-gray-100 font-mono;
+    @apply bg-dark-darker text-gray-100 font-mono min-h-screen;
     background-color: rgb(var(--background));
     color: rgb(var(--foreground));
   }
@@ -33,7 +37,7 @@
   }
   
   .section {
-    @apply py-16 md:py-24 border-b border-dark-lighter;
+    @apply py-24 border-b border-dark-lighter min-h-screen flex flex-col justify-center;
   }
   
   .heading {
