@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+  }
+
+  body {
+    @apply bg-dark-darker text-gray-100 font-mono;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+  }
+
+  ::selection {
+    @apply bg-terminal-green/20 text-terminal-green;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 md:py-24 border-b border-dark-lighter;
+  }
+  
+  .heading {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-terminal-green font-display;
+  }
+  
+  .subheading {
+    @apply text-xl md:text-2xl font-semibold mb-4 text-terminal-cyan font-display;
+  }
+  
+  .card {
+    @apply bg-dark-lighter rounded-lg p-6 border border-terminal-green/20 
+           hover:border-terminal-green/40 transition-all duration-300;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-terminal-green text-dark-darker hover:bg-terminal-green/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-terminal-cyan text-dark-darker hover:bg-terminal-cyan/90;
+  }
+  
+  .terminal-text {
+    @apply font-mono text-terminal-green;
+  }
+
+  .cyber-border {
+    @apply relative before:absolute before:inset-0 before:border-2 
+           before:border-terminal-green before:animate-pulse;
+  }
+
+  .matrix-bg {
+    @apply relative before:absolute before:inset-0 
+           before:bg-gradient-to-b before:from-transparent 
+           before:via-terminal-green/5 before:to-transparent 
+           before:animate-matrix;
+  }
+
+  /* Code-like elements */
+  .code-block {
+    @apply font-mono bg-dark-darker/50 rounded px-2 py-1 text-terminal-green;
+  }
+
+  .command-line {
+    @apply font-mono text-terminal-green before:content-['$_'];
+  }
+
+  /* Security-themed elements */
+  .secure-panel {
+    @apply bg-dark-lighter border-l-4 border-terminal-green px-4 py-3;
+  }
+
+  .alert-warning {
+    @apply bg-terminal-yellow/10 border-l-4 border-terminal-yellow text-terminal-yellow px-4 py-3;
+  }
+
+  .alert-danger {
+    @apply bg-terminal-red/10 border-l-4 border-terminal-red text-terminal-red px-4 py-3;
+  }
+} 

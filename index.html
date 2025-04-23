@@ -1,113 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kate Espinal | Cybersecurity & IT Systems Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-    
-    <div class="container">
-        <header>
-            <h1>Kate Espinal</h1>
-            <p>Cybersecurity Specialist & IT Systems Engineer</p>
-        </header>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Self-motivated cybersecurity and IT professional with experience in developing secure systems, automating processes, and supporting operations in dynamic environments.</p>
-            <p>Hands-on work in fitness and wellness industries, creating automation tools, troubleshooting infrastructure, and managing access control systems.</p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Bash</div>
-                <div class="skill-item">PowerShell</div>
-                <div class="skill-item">Splunk</div>
-                <div class="skill-item">Nessus</div>
-                <div class="skill-item">Wireshark</div>
-                <div class="skill-item">Linux</div>
-                <div class="skill-item">Windows Server</div>
-                <div class="skill-item">Active Directory</div>
-                <div class="skill-item">CRM Automation</div>
-                <div class="skill-item">Firewalls</div>
-                <div class="skill-item">SIEM</div>
-                <div class="skill-item">IDS/IPS</div>
-                <div class="skill-item">HTML/CSS/JavaScript</div>
-                <div class="skill-item">SQL</div>
-            </div>
-        </section>
-
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="experience-item">
-                <h3>CompTIA CySA+</h3>
-                <p class="date">March 2025</p>
-            </div>
-            <div class="experience-item">
-                <h3>Splunk Core Certified Power User</h3>
-                <p class="date">March 2025</p>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Gold's Gym | IT Systems Engineer</h3>
-                <ul>
-                    <li>Developed "Link8," a custom gate server integrated with DAOSAFE and ABC Financial API, processing 500+ daily check-ins, cutting unauthorized access by 50%.</li>
-                    <li>Automated CRM data tracking with Google Sheets API and Zapier, improving lead tracking efficiency by 60%.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>YogaSix Studios | Studio Manager</h3>
-                <ul>
-                    <li>Led all technical and operational systems, built onboarding tools, created SOPs, and resolved AV/Desktop issues.</li>
-                    <li>Transitioned studio to automated sales workflows, enhancing efficiency.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Transamerica | Life Insurance IT Specialist</h3>
-                <ul>
-                    <li>Supported 100+ daily client calls, managed secure data updates via CLI in legacy systems.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Gate Access Control Systems</h3>
-                    <p>Development and implementation of secure access control solutions</p>
-                </div>
-                <div class="project-card">
-                    <h3>CRM Workflow Automation</h3>
-                    <p>Custom automation solutions for business processes</p>
-                </div>
-                <div class="project-card">
-                    <h3>Network Security Configurations</h3>
-                    <p>Implementation of secure network architectures</p>
-                </div>
-                <div class="project-card">
-                    <h3>Vulnerability Assessments</h3>
-                    <p>Comprehensive security testing and analysis</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script>
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-        }
-    </script>
-</body>
-</html> 
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kate Espinal - Cybersecurity & IT Solutions Specialist" />
+    <meta name="keywords" content="cybersecurity, IT solutions, systems engineer, automation, security specialist" />
+    <title>Kate Espinal | Cybersecurity & IT Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark bg-dark-darker">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
